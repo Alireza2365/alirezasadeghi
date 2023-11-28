@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alireza Sadeghi</title>
+
+    <!-- General Styles -->
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            display: flex; /* Use flexbox to align content */
+        }
+        main {
+            flex-grow: 1; /* Allow the main content to grow and take remaining space */
+            padding-right: 20px; /* Add some spacing between TOC and main content */
         }
         h1 {
             font-size: 24px;
@@ -19,71 +28,77 @@
         .contact-info {
             margin-top: 20px;
         }
-    </style>
 
-    <style>
-        /* Define a container div with specified width, height, padding, and margin */
+        /* Styles for Text Container */
         .text-container {
-            width: 400px; /* Adjust the width as needed */
-            height: 200px; /* Adjust the height as needed */
-            padding: 20px; /* Adjust the padding as needed */
-            margin: 20px; /* Adjust the margin as needed */
-            border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+            width: 400px;
+            height: 200px;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ccc;
+        }
+        .text-content {
+            /* Additional styling for text content */
         }
 
-        /* Style the text inside the container */
-        .text-content {
-            /* You can add additional styling for the text here */
+        /* Styles for Table of Contents */
+        .table-of-contents {
+            position: sticky;
+            top: 0;
+            max-height: calc(100vh - 40px); /* Adjust based on your layout */
+            overflow-y: auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-right: 20px;
+        }
+        .table-of-contents a {
+            display: block;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <img src="/pic.png" alt="Alireza Sadeghi's Photo">
-    <h1>Alireza Sadeghi</h1>
-    <h2>Assistant Professor</h2>
-    <p>Department of xxx <br> xxx </p>
-
-    <div class="contact-info">
-        <p>Contact:</p>
-        <p>xxx<br>xxx</p>
-        <p>
-            <a href="mailto:your-email@example.com">[Email]</a> |
-            <a href="#">[Google Scholar]</a> |
-            <a href="#">[LinkedIn]</a> |
-            <a href="#">[ResearchGate]</a> |
-            <a href="#">[X (Twitter)]</a>
-        </p>
+    <div class="table-of-contents">
+        <p><strong>Table of Contents</strong></p>
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+            <!-- Add more links as needed -->
+        </ul>
     </div>
 
-    <h2>Hello and welcome to my website!</h2>
+    <main>
+        <img src="/pic.png" alt="Alireza Sadeghi's Photo">
+        <h1 id="section1">Alireza Sadeghi</h1>
+        <h2>Assistant Professor</h2>
+        <p>Department of xxx <br> xxx </p>
 
-    <h2>About me!</h2>
-    <p>
-        Alireza Sadeghi is currently a Postdoctoral associate at the Electrical & Computer engineering department at the University of Minnesota, Twin Cities, and a member of the Signal Processing in Networking and Communications (SPiNCOM) group under the supervision of Professor Georgios B. Giannakis.
-        Alireza obtained his B.Sc. degree (with Honors) from the Iran University of Science and Technology in 2012, and M.Sc. degree from the University of Tehran in 2015, both in Electrical and Computer Engineering,
-        and his PhD from the University of Minnesota in 2021. Before starting his role at the University of Minnesota as research associate, Alireza played a pivotal role as a full-time Data Scientist at 3M Corporation, where he was working on Natural Language Generation, Processing, and Inference using state-of-the-art NLP deep generative models such as BART, GPT-2, and BERT, among others.
-        During the summer of 2021 Alireza spent a wonderful summer as an intern at Microsoft Research focusing on Data Science and Optimization for the energy grid.
+        <div class="contact-info">
+            <p>Contact:</p>
+            <p>xxx<br>xxx</p>
+            <p>
+                <a href="mailto:your-email@example.com">[Email]</a> |
+                <a href="#">[Google Scholar]</a> |
+                <a href="#">[LinkedIn]</a> |
+                <a href="#">[ResearchGate]</a> |
+                <a href="#">[X (Twitter)]</a>
+            </p>
+        </div>
 
-    </p>
-    <h2>Research interests!</h2>
+        <h2 id="section2">Hello and welcome to my website!</h2>
+        <p>This is the introductory section of the website. Feel free to replace this text with your own welcome message or introduction.</p>
 
-        Alireza's research involves Signal Processing, Statistical Learning, Machine Learning, and Optimization with their application in applications in designing reliable, scalable, and efficient cyber-physical systems including next-generation wireless and power networks.
-        Particularly I am interested in designing robust and scalable supervised, reinforce- ment, semi-supervised, and federated learning algorithms.
-        Specifically, I am currently working on Robust Meta-Learning, Self-supervised Learning, and Representation Learning with Weak supervision.
+        <h2 id="section3">About me!</h2>
+        <p>
+            Alireza Sadeghi is a Postdoctoral associate at the Electrical & Computer engineering department at the University of Minnesota, Twin Cities, and a member of the Signal Processing in Networking and Communications (SPiNCOM) group under the supervision of Professor Georgios B. Giannakis.
+            Alireza obtained his B.Sc. degree (with Honors) from the Iran University of Science and Technology in 2012, and M.Sc. degree from the University of Tehran in 2015, both in Electrical & Computer Engineering.
+            In 2015 and before starting his PhD Alireza spent 6 months as a visiting scholar at the University of Padova, Padova, Italy working at the SIGnal processing and NETworking research group under the supervision of Professor Michele Zorzi.
+            <!-- Add more content as needed -->
+        </p>
 
+        <!-- ... Add more sections and content as needed ... -->
 
-<!--        Dr. Sadeghi was appointed an Assistant Professor in the Department of Computer Science at RPI in Fall 2023. His research revolves around the theme of collective intelligence. In today's rapidly evolving technological landscape, harnessing the power of data at the edge of the network has emerged as a pivotal catalyst for unlocking the true potential of collective intelligence. Dr. Amiri's research focuses on using this decentralized data to enhance the system intelligence beneficial for everyone while protecting the sensitive information.-->
-
-
-
-    <h2>Education and Awards</h2>
-    <p>
-        Dr. Sadeghi received the Ph.D. degree in Electrical and Electronic Engineering from University of Minnesota in 2021. He further received the M.Sc. degree in Electrical and Computer Engineering from the University of Tehran in 2014, and the B.Sc. degree in Electrical Engineering from the Iran University of Science and Technology in 2011, both with the highest rank. He is the recipient of the Best Ph.D. Thesis award from both the Department of Electrical and Electronic Engineering at Imperial College London during the academic year 2018-2019, as well as the IEEE Information Theory Chapter of UK and Ireland in the year 2019. Also, his paper titled "Federated learning over wireless fading channels" received the IEEE Communications Society Young Author Best Paper Award in the year 2022.
-    </p>
-
-    <h2>Opportunity for Ph.D. Students</h2>
-    <p>
-        For motivated Ph.D. students with strong mathematical and analytical skills: Please send your CV to the above email address if you are interested in Machine Learning and comfortable with programming.
-    </p>
+    </main>
 </body>
 </html>
